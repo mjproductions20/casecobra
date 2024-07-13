@@ -2,17 +2,13 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import Providers from "@/components/providers";
 import { Toaster } from "@/components/ui/toaster";
-import type { Metadata } from "next";
+import { constructMetadata } from "@/lib/utils";
 import { Recursive } from "next/font/google";
 import "./globals.css";
 
 const font = Recursive({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "CaseCobra",
-  description:
-    "Capture your favourite memories with your own, one-of-one phone case. CaseCobra allows you to protect your memories, not just your phone case.",
-};
+export const metadata = constructMetadata();
 
 export default function RootLayout({
   children,
